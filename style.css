@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg,rgb(192, 65, 220), rgb(81, 150, 220));
+    padding: 10px;
+} 
+.to-do{
+    width: 100%;
+    max-width: 550px;
+    margin: 100px auto 20px;
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 40px 30px 70px;
+
+}
+.to-do h2 {
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.to-do h2 img{
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+}
+.add-task{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(217, 225, 225);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.add-task input{
+    border: none;
+    background-color:rgb(217, 225, 225);
+    flex: 1; /* TO TAKE THE ENTIRE WIDTH FOR SEARCHBAR */
+    outline: none;
+    background: transparent;
+}
+.add-task button{
+    background-color: #ee9258;
+    color: white;
+    border-radius: 30px;
+    padding:10px 25px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+ul{
+    margin-top: 5px;
+}
+ul li{
+    margin-left: 25px;
+    list-style: none;
+    font-size: 16px;
+    padding: 7px 12px;
+    cursor: pointer;
+    user-select: none;
+    position: relative;
+}
+ul li::before{
+    content: '';
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    position: absolute;
+    background-image: url(circle.png);
+    background-size: cover;
+    background-position: center;
+    top: 5px;
+    left: -15px;
+}
+ul li.done{
+    text-decoration: line-through;
+    color: rgb(150, 148, 144);
+}
+ul li.done::before{
+    background-image: url(checked-pngrepo-com.png);
+}
+span{
+    position: absolute;
+    right: 0;
+    font-size: 22px;
+    height: 30px;
+    width: 30px;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+span:hover{
+    background-color: gray;
+}
